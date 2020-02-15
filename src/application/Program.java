@@ -1,7 +1,5 @@
 package application;
 
-
-
 import java.util.Date;
 import java.util.List;
 
@@ -44,6 +42,17 @@ public class Program {
 		Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),4000.00,department);
 		sellerDao.insert(newSeller);
 		System.out.println("Insertd! New Id = "+newSeller.getId());
+		
+		System.out.println();
+		System.out.println("**** TESTE 5 : SELLER UPDATE ****");
+		seller = sellerDao.findById(1);
+		seller.setName("POLIXÊNIA");
+		sellerDao.update(seller);
+		System.out.println("Atualizado");
+		
+		
+		
+		
 	}
 
 }
