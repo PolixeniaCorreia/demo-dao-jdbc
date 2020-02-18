@@ -1,6 +1,8 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -36,6 +38,14 @@ public class Program2 {
 		int id = sc.nextInt();
 		depDao.deleteById(id);
 		System.out.println("Deletado com sucesso!!");
+
+		System.out.println("**** TESTE 5 : DEPARTMENT FINDALL ****");
+		List<Department> list = depDao.findAll();
+		for (Department department : list) {
+			System.out.println(department);
+		}
+
+
 
 	}
 
